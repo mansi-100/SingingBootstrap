@@ -1,0 +1,215 @@
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<style>
+  .nav-item.active .nav-link {
+    background-color: green;
+  }
+
+  .m {
+    color: white;
+    background-color: #E75480;
+  }
+
+  .m2:hover {
+    background-color: red;
+  }
+
+  .m2:active {
+    background-color: green;
+  }
+</style>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+
+      <!--Login Modal-->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SignUpModal -->
+<div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Welcome Guy's</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link bold" aria-current="page" href="first.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bold" href="About.html">About Me</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link bold" href="Request.html">Request a song</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bold" href="Contact_us.html">Contact Us</a>
+          </li>
+
+          <li class="nav-item dropdown bold">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Register/Login
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#SignUpModal">Register</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/Troubleshoot.html">Troubleshooting</a></li>
+                      </ul>
+                    </li>
+          
+                  </ul>
+          </li>
+
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <center><h3>Request Any Song By Filling This Form ! change kro song name nd all field </h3></center>
+  <div class="container">
+
+    <form class="row g-3 needs-validation" novalidate>
+      <center>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Enter Your Full Name :</label>
+        <input type="text" class="form-control" id="validationCustom01" required>
+        <div class="invalid-feedback">
+          Please Provide Your Name
+        </div>
+        <br>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Enter Your Requested Song Name : </label>
+        <input type="text" class="form-control" id="validationCustom02" required>
+        <div class="invalid-feedback">
+          Please Provide Your Requested Song Name
+        </div>
+        <br>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Enter Singer / Movie Name of the Song :</label>
+        <!-- <div class="input-group has-validation"> -->
+          <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+            required>
+          <div class="invalid-feedback">
+            Please choose a Movie/Singer Name.
+          </div>
+        <!-- </div> -->
+      </div>
+      <div class="col-md-6"><br>
+        <label for="validationCustom03" class="form-label">Choose Today's Date : </label>
+        <br><input type="date" id="validationCustom03" required>
+        <div class="invalid-feedback">
+          Please Choose Today's Date.
+        </div>
+        <br>
+      </div><br>
+  
+      
+      
+      <div class="col-12"><br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+  </div>
+</center>
+  </form>
+
+  <div class="container">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2023 Mansi Nayak , All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+              <use xlink:href="#twitter"></use>
+            </svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+              <use xlink:href="#instagram"></use>
+            </svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"></use>
+            </svg></a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+  </script>
+
+
+</body>
+
+</html>
